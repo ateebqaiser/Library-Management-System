@@ -1,6 +1,6 @@
 import React from 'react'
 import './NavBar_style.css'
-import { Barcontent } from '../../src/data'
+import { Barcontent } from '../../data'
 
 const NavBar = () => {
   return (
