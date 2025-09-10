@@ -1,7 +1,8 @@
 import mongoose from "mongoose";
 import {book_collection} from "./models/bookSchema.js";
 
-const uri = "mongodb://localhost:27017/Library" 
+// const uri = "mongodb://localhost:27017/Library" 
+const uri = "mongodb+srv://ateebqaiser243_db_user:ateeb1234qaiser@library.ku8bhik.mongodb.net/Library?retryWrites=true&w=majority&appName=Library";
 mongoose.connect(uri)
 console.log("Mongo db connected successfully")
 
