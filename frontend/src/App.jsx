@@ -7,13 +7,16 @@ import ViewPage from './pages/View/View.jsx'
 const App = () => {
   return (
     <>
-      <BrowserRouter>
+      {/* <BrowserRouter>
       <NavBar></NavBar>
         <Routes>
           <Route path='/' element={<HomePage></HomePage>} ></Route>
           <Route path='/view' element={<ViewPage></ViewPage>} ></Route>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+
+      <ViewPage></ViewPage>
+
     </>
   )
 }
