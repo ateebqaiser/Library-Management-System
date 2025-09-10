@@ -1,0 +1,22 @@
+.navBar-style{
+    display: flex;
+    margin: 0;
+    padding: 20px;
+    background-color: rgb(151, 144, 144);
+    justify-content: center;
+}
+
+.navBar-style a{
+    text-decoration: none;
+    color: white;
+}
+
+.navBar-style a:hover{
+    color: black;
+}
+
+.navBar-style li{
+    display: flex;
+    gap: 280px;
+    list-style-type: none;
+}
