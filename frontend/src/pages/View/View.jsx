@@ -71,7 +71,7 @@ const ViewPage = () => {
 
   return (
     <>
-      {/* <div className='View-books'>
+      <div className='View-books'>
         {books.map((book) =>
           <div className='bookCard' key={book._id}>
             <p>Author: {book.author}</p>
@@ -79,7 +79,7 @@ const ViewPage = () => {
             <button onClick={() => handleEdit(book._id, book.title, book.author)}>Edit</button>
           </div>
         )}
-      </div> */}
+      </div>
 
       <div className="form">
         <label>Title</label>
