@@ -16,8 +16,10 @@ app.get('/',(req,res)=>{
 app.use('/book',bookRoutes)
 
 
-const port = 4000
-app.listen(port)
+export default app
+
+// const port = 4000
+// app.listen(port)
 
 
 
