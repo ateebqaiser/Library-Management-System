@@ -18,8 +18,8 @@ It allows you to **add**, **view**, **update**, and **delete** books through a s
 Before running the project, make sure you have the following installed:
 
 - [Node.js](https://nodejs.org/) (v16 or later recommended)
+- [MongoDB](https://www.mongodb.com/try/download/community) (for the database)
 - npm (comes with Node.js)
-- MongoDB (optional if you're connecting to a local database)
 
 ---
 
