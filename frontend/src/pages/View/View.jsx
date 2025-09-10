@@ -8,7 +8,7 @@ const ViewPage = () => {
   const [author, setAuthor] = useState("");
 
   const url="https://library-management-system-9n1s.vercel.app/book"
-  // const url="https://localhost:4000/book"
+  // const url="http://localhost:4000/book"
 
   // fetch all books
   useEffect(() => {
@@ -19,6 +19,7 @@ const ViewPage = () => {
     const res = await fetch(url);
     const json = await res.json();
     setBooks(json);
+    console.log(json)
   }
 
   // add book
@@ -70,7 +71,7 @@ const ViewPage = () => {
 
   return (
     <>
-      <div className='View-books'>
+      {/* <div className='View-books'>
         {books.map((book) =>
           <div className='bookCard' key={book._id}>
             <p>Author: {book.author}</p>
@@ -78,7 +79,7 @@ const ViewPage = () => {
             <button onClick={() => handleEdit(book._id, book.title, book.author)}>Edit</button>
           </div>
         )}
-      </div>
+      </div> */}
 
       <div className="form">
         <label>Title</label>
