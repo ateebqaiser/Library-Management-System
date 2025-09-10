@@ -5,7 +5,8 @@ const router=express.Router()
 
 
 router.get('/',async(req,res)=>{
-    res.send(await viewBook())
+    res.send({name:"ateeb"})
+    // res.send(await viewBook())
 })
 
 router.post('/',async(req,res)=>{
