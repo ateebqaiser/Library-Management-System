@@ -7,20 +7,23 @@ const ViewPage = () => {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
 
+  const url="https://library-management-system-9n1s.vercel.app/book"
+  // const url="https://localhost:4000/book"
+
   // fetch all books
   useEffect(() => {
     fetchBooks();
   }, []);
 
   async function fetchBooks() {
-    const res = await fetch('http://localhost:4000/book');
+    const res = await fetch(url);
     const json = await res.json();
     setBooks(json);
   }
 
   // add book
   async function handleAdd() {
-    await fetch('http://localhost:4000/book', {
+    await fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ title, author })
@@ -39,7 +42,7 @@ const ViewPage = () => {
   // update book
   async function handleUpdate() {
     if (!id) return; // no book selected
-    await fetch(`http://localhost:4000/book/${id}`, {
+    await fetch(`${url}/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ title, author })
@@ -51,7 +54,7 @@ const ViewPage = () => {
   // delete book
   async function handleDelete() {
     if (!id) return;
-    await fetch(`http://localhost:4000/book/${id}`, {
+    await fetch(`${url}/${id}`, {
       method: "DELETE"
     });
     await fetchBooks();
