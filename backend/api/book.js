@@ -1,25 +1,3 @@
-// import express from 'express'
-// import cors from 'cors'
-// import bookRoutes from './routes/book.js'
-
-
-
-// const app = express()
-// app.use(cors())
-// app.use(express.json())
-
-
-// app.get('/',(req,res)=>{
-//     res.send("Server Running")
-// })
-
-// app.use('/book',bookRoutes)
-
-
-// const port = 4000
-// app.listen(port)
-
-
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
@@ -61,7 +39,7 @@ app.post("/api/book", async (req, res) => {
 // ✅ Update book
 app.put("/api/book/:id", async (req, res) => {
   try {
-    const book = await book_collection.updateBook(req.params.id, req.body, { new: true });
+    const book = await book_collection.findByIdAndUpdate(req.params.id, req.body, { new: true });
     res.json(book);
   } catch (err) {
     console.error(err);
@@ -72,7 +50,7 @@ app.put("/api/book/:id", async (req, res) => {
 // ✅ Delete book
 app.delete("/api/book/:id", async (req, res) => {
   try {
-    await book_collection.deleteBook(req.params.id);
+    await book_collection.findByIdAndDelete(req.params.id);
     res.json({ message: "Book deleted successfully" });
   } catch (err) {
     console.error(err);
@@ -81,4 +59,3 @@ app.delete("/api/book/:id", async (req, res) => {
 });
 
 export default app;
-
