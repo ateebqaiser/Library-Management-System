@@ -1,8 +1,8 @@
 import React from 'react'
-import NavBar from './Bars/navBar/NavBar.jsx'
+import NavBar from './components/navBar/NavBar.jsx'
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
-import HomePage from './Pages/Home/HomePage.jsx'
-import ViewPage from './Pages/View/ViewPage.jsx'
+import HomePage from './pages/Home/Home.jsx'
+import ViewPage from './pages/View/View.jsx'
 
 const App = () => {
   return (
