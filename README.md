@@ -27,4 +27,4 @@ Before running the project, make sure you have the following installed:
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/ateebqaiser/library-management-system
+git clone https://github.com/ateebqaiser/MERN-Library-System
